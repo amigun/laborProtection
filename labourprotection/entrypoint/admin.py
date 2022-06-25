@@ -17,8 +17,6 @@ class UserAdmin(UserAdmin):
             try:
                 user = User.objects.get(username=username)
             except User.DoesNotExist:
-                # Create a new user. There's no need to set a password
-                # because only the password from settings.py is checked.
                 user = User(username=username)
                 user.is_staff = True
                 user.is_superuser = True
