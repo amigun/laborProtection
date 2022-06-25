@@ -4,7 +4,7 @@
 <h1>Регистрация</h1>
 
 <form action="{% url 'register' %}" method="post">
-    {{ form }}
+    {{ form.as_p }}
     {% csrf_token %}
     <button type="submit">Зарегистрироваться</button>
 </form>

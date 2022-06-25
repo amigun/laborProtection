@@ -17,6 +17,9 @@ class CustomAccountManager(BaseUserManager):
         user.save()
         return user
 
+    def create_superuser(self):
+        pass
+
 
 class User(AbstractBaseUser, PermissionsMixin):
     class Roles(models.TextChoices):

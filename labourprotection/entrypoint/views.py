@@ -1,10 +1,7 @@
 from django.shortcuts import render, redirect
-
-# Create your views here.
 from django.views.generic import TemplateView, View
-from django.contrib.auth.forms import UserCreationForm
-
 from django.contrib.auth import authenticate, login
+from entrypoint.forms import UserCreationForm
 
 
 class index(TemplateView):
@@ -27,16 +24,16 @@ class Register(View):
         return render(request, self.template_name, context)
 
     def post(self, request):
-        print(1)
-        form = UserCreationForm()
+        form = UserCreationForm(request.POST)
+
         print('\n\n\n')
-        print(form.is_valid)
+        print(form)
         print('\n\n\n')
 
         if form.is_valid():
             form.save()
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
+            username = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=password)
             login(request, user)
             return redirect('index')
