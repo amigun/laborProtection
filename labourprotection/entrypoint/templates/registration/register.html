@@ -1,0 +1,20 @@
+{% extends 'entrypoint/base.html' %}
+
+{% block mainpart %}
+<h1>Регистрация</h1>
+
+<form action="{% url 'register' %}" method="post">
+    {{ form }}
+    {% csrf_token %}
+    <button type="submit">Зарегистрироваться</button>
+</form>
+
+<!--<input type="text" placeholder="ФИО">-->
+<!--<input type="text" placeholder="КПП">-->
+<!--<input type="text" placeholder="ИНН">-->
+<!--<input type="text" placeholder="Телефон">-->
+<!--<input type="text" placeholder="Email">-->
+<!--<input type="checkbox">Информационное согласие на участие</input>-->
+<!--<input type="checkbox">Ознакомление порядком проведения мероприятия по охране труда</input>-->
+<!--<a href="#">Зарегистрироваться</a>-->
+{% endblock %}
