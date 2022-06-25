@@ -17,8 +17,12 @@ class CustomAccountManager(BaseUserManager):
         user.save()
         return user
 
-    def create_superuser(self):
-        pass
+    def create_superuser(self, email, password, created_at):
+        email = self.normalize_email(email)
+        user = self.model(email=email, password=password, created_at=created_at)
+        user.set_password(password)
+        user.save()
+        return user
 
 
 class User(AbstractBaseUser, PermissionsMixin):
