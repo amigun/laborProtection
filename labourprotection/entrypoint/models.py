@@ -28,9 +28,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(gtl('email address'), unique=True)
     password = models.CharField(max_length=255)
     roles = models.CharField(max_length=5, choices=Roles.choices)
-    kpp = models.BigIntegerField()
-    inn = models.BigIntegerField()
-    contacts = models.BigIntegerField()
+    kpp = models.CharField(max_length=255)
+    inn = models.CharField(max_length=255)
+    contacts = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now=True)
 
     object = CustomAccountManager()

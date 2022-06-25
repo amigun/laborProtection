@@ -27,7 +27,11 @@ class Register(View):
         return render(request, self.template_name, context)
 
     def post(self, request):
-        form = UserCreationForm(request.POST)
+        print(1)
+        form = UserCreationForm()
+        print('\n\n\n')
+        print(form.is_valid)
+        print('\n\n\n')
 
         if form.is_valid():
             form.save()
