@@ -51,7 +51,7 @@ padding: 14px 10 px;
 outline: none;
 color: white;
 border-radius: 24px;
-transition: 0.25px;
+transition: .25s;
 cursor: pointer;
 width: 400px;
 height: 90px;
@@ -69,4 +69,8 @@ font-weight: 700;
 	font-size: 20px;
 	text-align: left;
 	padding: 1px 750px;
+}
+
+input {
+    margin-bottom: -20px !important;
 }
