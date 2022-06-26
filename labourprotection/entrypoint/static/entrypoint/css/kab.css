@@ -10,6 +10,7 @@
     transition: all 0.8s ease;
     position: absolute;
     top: 600px;
+    width: 20%;
     left: 40px;
 text-align: center;
 }
@@ -20,6 +21,7 @@ text-align: center;
     border-color: #ffffff;
 }
 .buttonkab2 {
+    width: 20%;
     display: inline-block;
     text-decoration: none;
     background-color: #2e4458;
@@ -27,7 +29,7 @@ text-align: center;
     border: 3px solid #ffffff;
     border-radius: 20px;
     font-size: 29px;
-    padding: 6px 235px; 
+    padding: 6px 265px;
     transition: all 0.8s ease;
     position: absolute;
     top: 500px;

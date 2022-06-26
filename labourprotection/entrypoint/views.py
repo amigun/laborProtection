@@ -16,7 +16,9 @@ class index(TemplateView):
 
 def account(request):
     template_name = 'entrypoint/account.html'
-    return render(request, template_name)
+    if request.user.is_authenticated():
+        return render(request, template_name)
+    return redirect('https://example.com/')
 
 
 class Register(View):
