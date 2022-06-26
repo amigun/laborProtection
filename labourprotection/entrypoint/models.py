@@ -32,7 +32,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         USER = 'user', gtl('user')
 
     full_name = models.CharField(max_length=255)
-    email = models.EmailField(gtl('email address'), unique=True)
+    email = models.EmailField(gtl('Почта'), unique=True)
     password = models.CharField(max_length=255)
     roles = models.CharField(max_length=5, choices=Roles.choices)
     kpp = models.CharField(max_length=255)

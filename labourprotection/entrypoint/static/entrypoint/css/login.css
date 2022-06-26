@@ -49,7 +49,7 @@ body {
     font-size: 20px;
 }
 
-.box input[type="submit"] {
+.box button[type="submit"] {
 	border: 0;
     background: none;
     display: block;
@@ -70,6 +70,7 @@ body {
     font-weight: 700;
 }
 
-.box input[type="submit"]:hover {
-	background: lightgray;
+.box button[type="submit"]:hover {
+	background: white;
+	color: #2E4458;
 }
