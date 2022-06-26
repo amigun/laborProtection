@@ -5,7 +5,6 @@
 <form class="boxreg" action="{% url 'register' %}" method="post">
 	<h1>Регистрация</h1>
     {{ form.as_p }}
-    {% csrf_token %}
 
     <div class="checkbox">
         <p><input  type="checkbox" id="Инф согл" name="" placeholder="">
@@ -14,6 +13,7 @@
             <label>Ознакомление с порядком проведения мониторинга по охране труда</label></p>
     </div>
 
+    {% csrf_token %}
     <input class="button" type="submit" value="Зарегистрироваться">
 </form>
 

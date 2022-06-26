@@ -1,15 +1,38 @@
+
+
 {% extends 'entrypoint/base.html' %}
 
 {% block mainpart %}
-    <h1>Главная страница</h1>
 
     {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">Logout</a>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'entrypoint/css/kab.css' %}">
+    <style>
+        body{
+            background-image: url('/static/entrypoint/img/backgroundkab4.png');
+        }
+    </style>
+ <a href="{% url 'logout' %}"><img src="{% static 'entrypoint/img/logout.svg'%}" width="50px" style="margin: 10px;" alt="Logout"></a>
     {% else %}
+        {% load static %}
+                <link rel="stylesheet", type="text/css" href="{% static 'entrypoint/css/kab.css' %}">
         <a href="{% url 'login' %}">Войти</a>
         <a href="{% url 'register' %}">Регистрация</a>
     {% endif %}
 
-    <div>User: {{ user }}</div>
+<!--    <div>User: {{ user }}</div>-->
+
+    <div class="FIOID">
+      <span class="ivanov">{{ user.full_name }}</span>
+      <p>{{ user.email }}</p>
+      </div>
+    <div class="buttons">
+    <a href="http://yandex.ru" class="buttonkab1" target="_blank">
+      Личные данные
+    </a></div>
+    <p><a href="http://yandex.ru" class="buttonkab2" target="_blank">
+      Мои организации
+    </a>
+    </p>
 
 {% endblock %}

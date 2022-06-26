@@ -21,5 +21,6 @@ from entrypoint.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index.as_view(), name='index'),
-    path('ep/', include('entrypoint.urls'))
+    path('ep/', include('entrypoint.urls')),
+    path('passport/', include('passport.urls'))
 ]

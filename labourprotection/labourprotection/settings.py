@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 'entrypoint.apps.EntrypointConfig',
-    'entrypoint'
+    'entrypoint',
+    'passport'
 ]
 
 MIDDLEWARE = [
