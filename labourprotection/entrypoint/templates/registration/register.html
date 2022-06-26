@@ -1,13 +1,91 @@
 {% extends 'entrypoint/base.html' %}
 
 {% block mainpart %}
-<h1>Регистрация</h1>
 
-<form action="{% url 'register' %}" method="post">
+<form class="boxreg" action="{% url 'register' %}" method="post">
+	<h1>Регистрация</h1>
     {{ form.as_p }}
     {% csrf_token %}
-    <button type="submit">Зарегистрироваться</button>
+
+    <div class="checkbox">
+        <p><input  type="checkbox" id="Инф согл" name="" placeholder="">
+            <label  for="Инф согл">Информированное согласие на участие</label></p>
+        <p><input  type="checkbox" name="" placeholder="">
+            <label>Ознакомление с порядком проведения мониторинга по охране труда</label></p>
+    </div>
+
+    <input class="button" type="submit" value="Зарегистрироваться">
 </form>
+
+<script>
+    labels = document.getElementsByTagName('label');
+
+    for(var i = 0; i < 7; i++) {
+        labels[0].remove();
+    }
+
+    uls = document.getElementsByTagName('ul');
+
+    try {
+        for(var i = 0; i < 2; i++) {
+            uls[0].remove();
+        }
+    } catch (err) {}
+
+    document.getElementsByClassName('helptext')[1].remove()
+
+    var inputs = document.getElementsByTagName('input');
+
+    inputs[0].placeholder = "ФИО";
+    inputs[1].placeholder = "КПП";
+    inputs[2].placeholder = "ИНН";
+    inputs[3].placeholder = "Телефон";
+    inputs[4].placeholder = "E-mail";
+    inputs[5].placeholder = "Пароль";
+    inputs[6].placeholder = "Повторите пароль";
+
+    function check() {
+        var kpp = document.getElementById('id_kpp');
+        kpp.value = (kpp.value).replace(/\D/g,'');
+
+        var inn = document.getElementById('id_inn');
+        inn.value = (inn.value).replace(/\D/g, '');
+
+        var contacts = document.getElementById('id_contacts');
+        contacts.value = (contacts.value).replace(/\D/g, '');
+
+
+        function isEmailValid(email) {
+            const emailRegexp = new RegExp(/^[a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1}([a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1})*[a-zA-Z0-9]@[a-zA-Z0-9][-\.]{0,1}([a-zA-Z][-\.]{0,1})*[a-zA-Z0-9]\.[a-zA-Z0-9]{1,}([\.\-]{0,1}[a-zA-Z]){0,}[a-zA-Z0-9]{0,}$/i)
+
+            return emailRegexp.test(email)
+        }
+
+        var email = document.getElementById('id_inn')
+        if(!isEmailValid(email.value)) {
+            email.style.border = "3px solid #red";
+            console.log(1)
+        } else {
+            email.style.border = "3px solid #0367fd";
+            console.log(2)
+        }
+    }
+
+    let timerId = setInterval(check, 100)
+</script>
+
+{% endblock %}
+
+
+<!--<input type="text" name="" placeholder="КПП" id="userkpp">-->
+<!--<input type="text" name="" placeholder="ФИО" id="userfio">-->
+<!--<input type="text" name="" placeholder="ИНН" id="userinn">-->
+<!--<input type="text" name="" placeholder="Телефон" id="userphone">-->
+<!--<input type="text" name="" placeholder="E-Mail" id="usermail">-->
+<!--<input type="password" name="" placeholder="Пароль" id="userpass">-->
+
+
+
 
 <!--<input type="text" placeholder="ФИО">-->
 <!--<input type="text" placeholder="КПП">-->
@@ -17,4 +95,4 @@
 <!--<input type="checkbox">Информационное согласие на участие</input>-->
 <!--<input type="checkbox">Ознакомление порядком проведения мероприятия по охране труда</input>-->
 <!--<a href="#">Зарегистрироваться</a>-->
-{% endblock %}
+

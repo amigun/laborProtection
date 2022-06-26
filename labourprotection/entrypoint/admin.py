@@ -5,9 +5,9 @@ from django.conf import settings
 from django.contrib.auth.backends import BaseBackend
 from django.contrib.auth.hashers import check_password
 
-# User = get_user_model()
-#
-#
+User = get_user_model()
+
+
 # @admin.register(User)
 # class UserAdmin(UserAdmin):
 #     def authenticate(self, request, username=None, password=None):

@@ -1,16 +1,41 @@
 {% extends 'entrypoint/base.html' %}
 
 {% block mainpart %}
-<h1>Войти</h1>
 
-{% if form.errors %}
-    <p>{{ form.errors.error }}</p>
-{% endif %}
+    {% if form.errors %}
+        <p>{{ form.errors.error }}</p>
+    {% endif %}
 
-<form action="{% url 'login' %}" method="post">
-    {{ form }}
-    {% csrf_token %}
-    <button type="submit">Войти</button>
-</form>
+<!--    <form class="box" action="{% url 'login' %}" method="post">-->
+<!--        <h1>Вход</h1>-->
+<!--        <input type="text" name="" placeholder="E-Mail" id="usermail" />-->
+<!--        <input type="password" name="" placeholder="Пароль" id="userpass" />-->
+<!--        <input-->
+<!--        class="button"-->
+<!--        type="submit"-->
+<!--        name=""-->
+<!--        value="ВОЙТИ"-->
+<!--        onclick="validate()"-->
+<!--        />-->
+<!--    </form>-->
+
+    <form class="box" action="{% url 'login' %}" method="post">
+        <h1>Вход</h1>
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit">Войти</button>
+    </form>
+
+    <script>
+    var labels = document.getElementsByTagName('label');
+
+    labels[0].remove();
+    labels[0].remove();
+
+    var inputs = document.getElementsByTagName('input');
+
+    inputs[0].placeholder = "E-mail";
+    inputs[1].placeholder = "Пароль";
+    </script>
 
 {% endblock %}
