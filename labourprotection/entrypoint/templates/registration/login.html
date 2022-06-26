@@ -1,31 +1,29 @@
 {% extends 'entrypoint/base.html' %}
 
-{% block styles %}
-{% endblock %}
-
 {% block mainpart %}
-    <h1>Войти</h1>
 
     {% if form.errors %}
         <p>{{ form.errors.error }}</p>
     {% endif %}
 
     <form class="box" action="{% url 'login' %}" method="post">
-          <input type="text" name="" placeholder="E-Mail" id="usermail" />
-          <input type="password" name="" placeholder="Пароль" id="userpass" />
-          <input
-            class="button"
-            type="submit"
-            name=""
-            value="ВОЙТИ"
-            onclick="validate()"
-          />
-        </form>
+        <h1>Вход</h1>
+        <input type="text" name="" placeholder="E-Mail" id="usermail" />
+        <input type="password" name="" placeholder="Пароль" id="userpass" />
+        <input
+        class="button"
+        type="submit"
+        name=""
+        value="ВОЙТИ"
+        onclick="validate()"
+        />
+    </form>
 
-    <!--<form action="{% url 'login' %}" method="post">-->
-    <!--    {{ form }}-->
-    <!--    {% csrf_token %}-->
-    <!--    <button type="submit">Войти</button>-->
-<!--</form>-->
+    <form class="box" action="{% url 'login' %}" method="post">
+        <h1>Вход</h1>
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit">Войти</button>
+    </form>
 
 {% endblock %}

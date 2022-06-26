@@ -1,5 +1,3 @@
-{% load static %}
-
 body.locked {
   height: 100vh;
   overflow-y: hidden;
@@ -13,12 +11,12 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-    background-image: url({% static '../../static/entrypoint/img/backgroundlogin.png' %});
+    background-image: url('/static/entrypoint/img/backgroundlogin.png');
 	background-size: cover;
     position: absolute;
 }
 .box{
-	width:700px;
+	width: 35vw;
     padding: 30px;
     position: absolute;
     top: 0%;
@@ -26,7 +24,7 @@ body {
     transform: translate(-0%,-0%);
     background: #2E4458;
     text-align: center;
-    height: 2000px;
+    height: 100vh;
     font-size: 50px;
 }
 
