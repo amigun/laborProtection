@@ -22,12 +22,13 @@ body {
 				grid-column-gap: 0px;
 				grid-row-gap: 0px;
 				text-align: right;
+				justify-items: end
 			}
 			.div1{
 				font-size: 110px;
 				color: white;
-				font-family: "Geometria" ;
-				grid-area: 2 / 2 / 3 / 5 ;
+			    position: absolute;
+			    left: 500px;
 			}
 			.buttonkab1 {
 			    display: inline-block;
@@ -40,7 +41,7 @@ body {
 		  		padding: 6px 174px;
 		   		transition: all 0.8s ease;
  				position: relative;
-			    top: 20px;
+			    top: 300px;
 			    left: 1000px;
 				text-align: left;
 				right: 10px;
@@ -63,7 +64,7 @@ body {
 		  		padding: 6px 75px;
 		   		transition: all 0.8s ease;
  				position: relative;
-			    top: 20px;
+			    top: 300px;
 			    left: 1010px;
 				text-align: left;
 				right: 20px;

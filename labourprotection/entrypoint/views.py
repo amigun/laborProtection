@@ -22,7 +22,7 @@ def account(request):
 
 
 class Register(View):
-    template_name = 'registration/test.html'
+    template_name = 'registration/register.html'
 
     def get(self, request):
         context = {

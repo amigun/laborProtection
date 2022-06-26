@@ -21,7 +21,7 @@
       Мои организации
     </a>
     </p>
-    <a href="{% url 'logout' %}">Logout</a>
+    <a href="{% url 'logout' %}"><img src="{% static 'entrypoint/img/logout.svg' %}" alt="LogOut" width="50px;" style="margin: 10px"></a>
     {% else %}
         {% load static %}
                 <link rel="stylesheet", type="text/css" href="{% static 'entrypoint/css/main.css' %}">
@@ -37,8 +37,8 @@
 
                 </div>
 
+                <div class="div1">Мониторинг<br>по охране труда</div>
                 <div class="parent">
-                    <div class="div1">Мониторинг<br>по охране труда</div>
                 </div>
                 <a href="{% url 'login' %}" class="buttonkab1">
           Войти
