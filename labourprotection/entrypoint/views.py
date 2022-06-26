@@ -15,7 +15,7 @@ class index(TemplateView):
 
 
 class Register(View):
-    template_name = 'registration/register.html'
+    template_name = 'registration/test.html'
 
     def get(self, request):
         context = {
@@ -25,11 +25,6 @@ class Register(View):
 
     def post(self, request):
         form = UserCreationForm(request.POST)
-
-        print('\n\n\n')
-        print(form)
-        print('\n\n\n')
-
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('email')
