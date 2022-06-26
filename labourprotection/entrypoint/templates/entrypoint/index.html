@@ -10,18 +10,19 @@
             background-image: url('/static/entrypoint/img/backgroundkab4.png');
         }
     </style>
+<a href="{% url 'logout' %}"><img src="{% static 'entrypoint/img/logout.svg' %}" alt="LogOut" width="50px;" style="margin: 10px"></a>
     <div class="FIOID">
       <span class="ivanov">{{ user.full_name }}</span>
       <p>{{ user.email }}</p>
       </div>
+    <div class="buttons">
     <a href="http://yandex.ru" class="buttonkab1" target="_blank">
       Личные данные
     </a>
     <p><a href="http://yandex.ru" class="buttonkab2" target="_blank">
       Мои организации
-    </a>
+    </a></buttons>
     </p>
-    <a href="{% url 'logout' %}"><img src="{% static 'entrypoint/img/logout.svg' %}" alt="LogOut" width="50px;" style="margin: 10px"></a>
     {% else %}
         {% load static %}
                 <link rel="stylesheet", type="text/css" href="{% static 'entrypoint/css/main.css' %}">
@@ -40,11 +41,12 @@
                 <div class="div1">Мониторинг<br>по охране труда</div>
                 <div class="parent">
                 </div>
+                <div class="butttons">
                 <a href="{% url 'login' %}" class="buttonkab1">
           Войти
           <a href="{% url 'register' %}" class="buttonkab2">
           Зарегистрироваться </a>
-                </a>
+                </a></div>
     {% endif %}
 
 {% endblock %}

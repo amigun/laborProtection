@@ -28,7 +28,10 @@ body {
 				font-size: 110px;
 				color: white;
 			    position: absolute;
-			    left: 500px;
+			    left: 300px;
+			    top: 250px;
+			    width: 1500px;
+			    text-align: right;
 			}
 			.buttonkab1 {
 			    display: inline-block;
@@ -54,6 +57,8 @@ body {
     			border-color: #ffffff;
     			}
     		.buttonkab2 {
+    		    margin-top: 25px !important;
+
 			    display: inline-block;
     			text-decoration: none;
     			background-color: #2e4458;
@@ -76,3 +81,9 @@ body {
     			color: #2e4458;
     			border-color: #ffffff;
     			}
+
+   .butttons {
+        position: absolute;
+        top: 300px;
+        left: 200px;
+   }
