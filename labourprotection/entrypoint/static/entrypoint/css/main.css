@@ -1,87 +1,77 @@
-body.modal-open {
-	height: 100vh;
-  overflow: hidden;
-}
-body{
-	margin:0;
-	padding: 0;
-	font-family: sans-serif;
-	background-size:cover ;
-	background: url(source/Group4.png);
-
-}
-.box h1
-{
-	position: absolute;
-width: 1588.61px;
-height: 229px;
-left: 1300px;
-top: 200px;
-font-family:fonts/geometria_bolditalic.otf;
-font-style: normal;
-font-weight: 500;
-font-size: 100.426px;
-line-height: 154px;
-text-align: left;
-color: #FFFFFF;
-
-}
-.box h2
-{
-	position: absolute;
-width: 1588.61px;
-height: 229px;
-left: 1100px;
-top: 300px;
-font-family:fonts/geometria_bolditalic.otf;
-font-style: normal;
-font-weight: 500;
-font-size: 100.426px;
-line-height: 154px;
-text-align: left;
-color: #FFFFFF;
-
-}
-.button_log{
-	border: 0;
-background: none;
-display: block;
-margin: 20px auto;
-text-align: center;
-border: 2px solid white;
-padding: 14px 10 px;
-outline: none;
-color: white;
-border-radius: 24px;
-transition: 0.25px;
-cursor: pointer;
-position: absolute;
-width: 406px;
-height: 88px;
-left: 200px;
-top: 1460px;
-font-size: 50px;
-
-}
-.button_reg{
-	border: 0;
-background: none;
-display: block;
-margin: 20px auto;
-text-align: center;
-border: 2px solid white;
-padding: 14px 10 px;
-outline: none;
-color: white;
-border-radius: 24px;
-transition: 0.25px;
-cursor: pointer;
-position: absolute;
-width: 406px;
-height: 84px;
-left: 515px;
-top: 980px;
-font-size: 50px;
-
+body {
+	background: url('img/mainmenu.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
+.shape {
+	z-index: -1;
+	width: 3000px;
+	height: 3000px;
+	background: #2E4458;
+	transform: rotate(41.14deg);
+	position: fixed;
+	right: -2500px;
+	top: -1100px;
+}
+
+			.parent {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				grid-column-gap: 0px;
+				grid-row-gap: 0px;
+				text-align: right;
+			}
+			.div1{
+				font-size: 110px;
+				color: white;
+				font-family: "Geometria" ;
+				grid-area: 2 / 2 / 3 / 5 ;
+			}
+			.buttonkab1 {
+			    display: inline-block;
+    			text-decoration: none;
+    			background-color: #2e4458;
+    			color: #ffffff;
+	   			border: 3px solid #ffffff;
+			    border-radius: 20px;
+ 				font-size: 29px;
+		  		padding: 6px 174px;
+		   		transition: all 0.8s ease;
+ 				position: relative;
+			    top: 20px;
+			    left: 1000px;
+				text-align: left;
+				right: 10px;
+				font-family:"Geometria" ;
+				}
+			.buttonkab1:hover{
+    			text-decoration: none;
+    			background-color: #8da9b3;
+    			color: #2e4458;
+    			border-color: #ffffff;
+    			}
+    		.buttonkab2 {
+			    display: inline-block;
+    			text-decoration: none;
+    			background-color: #2e4458;
+    			color: #ffffff;
+	   			border: 3px solid #ffffff;
+			    border-radius: 20px;
+ 				font-size: 29px;
+		  		padding: 6px 75px;
+		   		transition: all 0.8s ease;
+ 				position: relative;
+			    top: 20px;
+			    left: 1010px;
+				text-align: left;
+				right: 20px;
+				font-family: "Geometria";
+				}
+			.buttonkab2:hover{
+    			text-decoration: none;
+    			background-color: #8da9b3;
+    			color: #2e4458;
+    			border-color: #ffffff;
+    			}

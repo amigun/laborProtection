@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Вход</title>
-	</head>
+
 	<body>
 		<div class="shape">
 			
@@ -11,90 +7,10 @@
 		<div class="parent">
 			<div class="div1">Мониторинг<br>по охране труда</div>
 		</div>
-		<a href="file:///D:/ProjectZ/login.html" class="buttonkab1" target="_blank">
+		<a href="{% url 'login %}" class="buttonkab1" target="_blank">
   Войти
-  <a href="file:///D:/ProjectZ/regist.html" class="buttonkab2" target="_blank">
+  <a href="{% url 'register' %}" class="buttonkab2" target="_blank">
   Зарегестрироваться
 </a>
-		<style>
-			body {
-				background: url('source/Group4.png');
-				background-size: 100%;
-				background-repeat: no-repeat;
-			}
-
-			.shape {
-				z-index: -1;
-				width: 3000px;
-				height: 3000px;
-				background: #2E4458;
-				transform: rotate(41.14deg);
-				position: fixed;
-				right: -2500px;
-				top: -1100px;
-			}
-
-			.parent {
-				display: grid;
-				grid-template-columns: repeat(4, 1fr);
-				grid-template-rows: repeat(2, 1fr);
-				grid-column-gap: 0px;
-				grid-row-gap: 0px;
-				text-align: right;
-			}
-			.div1{
-				font-size: 110px;
-				color: white;
-				font-family: "Geometria" ;
-				grid-area: 2 / 2 / 3 / 5 ;
-			}
-			.buttonkab1 {
-			    display: inline-block;
-    			text-decoration: none;
-    			background-color: #2e4458;
-    			color: #ffffff;
-	   			border: 3px solid #ffffff;
-			    border-radius: 20px;
- 				font-size: 29px;
-		  		padding: 6px 174px; 
-		   		transition: all 0.8s ease;
- 				position: relative;
-			    top: 20px;
-			    left: 1000px;
-				text-align: left;
-				right: 10px;
-				font-family:"Geometria" ;
-				}
-			.buttonkab1:hover{
-    			text-decoration: none; 
-    			background-color: #8da9b3;
-    			color: #2e4458;
-    			border-color: #ffffff;
-    			}
-    		.buttonkab2 {
-			    display: inline-block;
-    			text-decoration: none;
-    			background-color: #2e4458;
-    			color: #ffffff;
-	   			border: 3px solid #ffffff;
-			    border-radius: 20px;
- 				font-size: 29px;
-		  		padding: 6px 75px; 
-		   		transition: all 0.8s ease;
- 				position: relative;
-			    top: 20px;
-			    left: 1010px;
-				text-align: left;
-				right: 20px;
-				font-family: "Geometria";
-				}
-			.buttonkab2:hover{
-    			text-decoration: none; 
-    			background-color: #8da9b3;
-    			color: #2e4458;
-    			border-color: #ffffff;
-    			}
-
-		</style>
 	</body>
-</html> 
+ {% endblock %}
