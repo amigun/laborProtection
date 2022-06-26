@@ -1,0 +1,74 @@
+body.locked {
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+body {
+  background-image: url('https://i.ibb.co/K5BKBPB/bgreg.png')
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-size: cover;
+}
+.boxreg {
+  width: 1920px;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-0%, -50%);
+  background: none;
+  text-align: center;
+  height: 1080px;
+  font-size: 50px;
+}
+.boxreg h1 {
+  color: white;
+  font-weight: 700;
+}
+.boxreg input[type="text"],
+.boxreg input[type="password"] {
+  border: 0;
+  background-color: white;
+  display: block;
+  margin: 10px auto;
+  text-align: left;
+  border: 3px solid #0367fd;
+  padding: 14px 10px;
+  width: 400px;
+  height: 40px;
+  outline: none;
+  color: Black;
+  border-radius: 24px;
+  transition: 0.25px;
+  font-size: 20px;
+}
+.boxreg input[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 3px solid white;
+  padding: 14px 10 px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25px;
+  cursor: pointer;
+  width: 400px;
+  height: 90px;
+  top: 679px;
+  left: 250px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.boxreg input[type="submit"]:hover {
+  background: lightgray;
+}
+.checkbox {
+  color: white;
+  font-size: 20px;
+  text-align: left;
+  padding: 1px 750px;
+}

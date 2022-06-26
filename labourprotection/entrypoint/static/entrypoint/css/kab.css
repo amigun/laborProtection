@@ -1,0 +1,55 @@
+.buttonkab1 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2e4458;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    font-size: 29px;
+    padding: 6px 265px; 
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 600px;
+    left: 40px;
+text-align: center;
+}
+.buttonkab1:hover{
+    text-decoration: none; 
+    background-color: #8da9b3;
+    color: #2e4458;
+    border-color: #ffffff;
+}
+.buttonkab2 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2e4458;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    font-size: 29px;
+    padding: 6px 235px; 
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 500px;
+    left: 40px;
+    text-align: center;
+}
+.buttonkab2:hover{
+    text-decoration: none; 
+    background-color: #8da9b3;
+    color: #2e4458;
+    border-color: #ffffff;
+}
+.FIOID{
+    position: fixed;
+    left: 220px;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    top: 100px ;
+
+}
+.ivanov{
+    font-weight: 700;
+    font-size: 60px;
+}

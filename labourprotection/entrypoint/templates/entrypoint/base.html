@@ -1,13 +1,16 @@
 {% load static %}
-<!doctype html>
+
+<!DOCTYPE HTML>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../../static/css/styleregistr.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'entrypoint/css/styleregistr.css' %}">
     <title>{{ title }}</title>
+    {% block styles %}
+    {% endblock %}
 </head>
 <body>
 {% block mainpart %}

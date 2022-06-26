@@ -1,0 +1,45 @@
+{% extends 'entrypoint/base.html' %}
+
+{% block styles %}
+      <style>
+      body {
+        background-image: url(bgreg.png);
+        background-color: #c7b39b;
+        position: absolute;
+      }
+    </style>
+{% endblock %}
+
+{% block mainpart %}
+  <body class="locked">
+    <form class="boxreg" action="login.html" method="post">
+      <h1>Регистрация</h1>
+      <input type="text" name="" placeholder="ФИО" id="userfio" />
+      <input type="text" name="" placeholder="КПП" id="userkpp" />
+      <input type="text" name="" placeholder="ИНН" id="userinn" />
+      <input type="text" name="" placeholder="Телефон" id="userphone" />
+      <input type="text" name="" placeholder="E-Mail" id="usermail" />
+      <input type="password" name="" placeholder="Пароль" id="userpass" />
+      <div class="checkbox">
+        <p>
+          <input type="checkbox" id="Инф согл" name="" placeholder="" />
+          <label for="Инф согл">Информированное согласие на участие</label>
+        </p>
+        <p>
+          <input type="checkbox" name="" placeholder="" />
+          <label for="Ознакомл"
+            >Ознакомление с порядком проведения мониторинга по охране
+            труда</label
+          >
+        </p>
+      </div>
+      <input
+        class="button"
+        type="submit"
+        name=""
+        value="Зарегистрироваться"
+        onclick="validate()"
+      />
+    </form>
+
+{% endblock %}
