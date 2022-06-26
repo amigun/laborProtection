@@ -14,6 +14,11 @@ class index(TemplateView):
         return context
 
 
+def account(request):
+    template_name = 'entrypoint/account.html'
+    return render(request, template_name)
+
+
 class Register(View):
     template_name = 'registration/test.html'
 
