@@ -7,4 +7,4 @@ from .forms import *
 # Create your views here.
 class WebPassportPage(CreateView):
     form_class = WebPassport
-    template_name = 'passport/index.html'
+    template_name = 'passport/passport.html'

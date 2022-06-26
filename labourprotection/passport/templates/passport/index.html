@@ -11,7 +11,8 @@
 <form action="{% url 'WebPassport' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Отправить</button>
+    <div class="for_button">
+        <button type="submit">Отправить</button></div>>
 </form>
 </body>
 </html>

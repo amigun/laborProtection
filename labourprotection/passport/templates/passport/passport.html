@@ -1,0 +1,89 @@
+{% extends 'entrypoint/base.html' %}
+
+{% block mainpart %}
+
+<div class="container">
+    <h1>
+        Вебпаспорт
+    </h1>
+
+    <div class="bg">
+        <form action="{% url 'WebPassport' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Отправить</button>
+</form>
+    </div>
+</div>
+
+<style>
+    .container {
+        position: relative;
+        width: 99vw;
+    }
+  body {
+	background-size: cover;
+    background-image: url('/static/entrypoint/img/backgroundregister.png');
+    background-attachment: fixed;
+  }
+
+  h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+  }
+
+
+  .bg {
+    width: 1200px;
+    background-color: white;
+    opacity: .6;
+        border-radius: 100px;
+    padding: 25px;
+    box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.37);
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+    p {
+        display: flex;
+    }
+
+  label {
+    font-size: 25px;
+    margin-right: 20px;
+  }
+  textarea, input {
+    box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  textarea {
+    height: 30px;
+  }
+
+  button, select {
+    padding: 10px;
+    border: 3px solid #5E768C;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0%);
+    color: #5E768C;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .25s;
+  }
+
+    button {
+    display: inline-block;
+    margin-left: 40%;
+    padding-left: 50px;
+    padding-right: 50px;
+    }
+
+  button:hover {
+    background: #5E768C;
+    color: white;
+  }
+</style>
+{% endblock %}
